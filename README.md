@@ -34,7 +34,9 @@ position, rotation, animation, and light
   
  the value in the position attribute represents component data
 ---------------------------------
-  
+  multiple components can be attached to an entity like multiple pieces of puzzles are combined together.
+
+All components together can define how the entity will look and how the entity will behave.
   
 -------------------------------
 Single-property component:
