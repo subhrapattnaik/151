@@ -85,4 +85,40 @@ init: This is used to set up the initial state. It is called once when the compo
 update: This is used to modify the entity.
 remove: This is used to undo all previous modifications to the entity.
 tick: This is used for checking continuous changes. It is called on every render loop of the scene.
+ ------------------------
+ For our log component, 
+ 
+ let’s define a message data property type via the schema. 
+ The ‘message’ property type will have a ‘string’ type and have a ‘default’ value of Hello, World!
+ 
+ Now, this component will log a simple message once when the component’s entity is attached using the .init() handler.
+ ------------------------
+ The component’s property values defined in the schema can be accessed through this.data.
+this points to the entity at which the component is attached.
+ 
+ -----------------------
+ 
+ use in <a-entity log="message:"Hi..its me"></a-entity>
+  
+  ------------------------------------
+  --------------------------------------------------------------------
+  will create a simple component that can handle a box's movement from one position to another in the x-direction.
+    add it in index .html in <script></script>
+  ------------------------
+  
+  write BOX.js (to register the component)
+  move-box is the component name (a string given while registering)
+  
+  We should update the value of the position attribute of <an-entity> where <a-box> is present.
+To do this, we use:
+this.el.getAttribute(): to get the current values of the position attribute.
+this.el.setAttribute(): to set the updated value of the position attribute.
+this.elgives reference to the entity as an HTML element.
+  --------------------------------------------
+  we should attach this component to the entity to move the box.
+ 
+ 
+ 
+ 
+ 
  
